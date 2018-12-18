@@ -13,7 +13,7 @@
 #include "zone.h"
 #include <stdlib.h>
 
-#if !defined(_WIN32) && !defined(__MBED__) && !defined(__AVR__) && !defined(TEENSYDUINO)
+#if !defined(_WIN32) && !defined(__MBED__) && !defined(__AVR__) && !defined(TEENSYDUINO) && !defined(__SAMD51__)
 #include <sys/uio.h>
 #else
 struct iovec {
