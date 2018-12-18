@@ -88,7 +88,7 @@
 
 #if MSGPACK_ENDIAN_LITTLE_BYTE
 
-#if defined(_WIN32) || defined(__MBED__) || defined(__AVR__) || defined(TEENSYDUINO)
+#if defined(_WIN32) || defined(__MBED__) || defined(__AVR__) || defined(TEENSYDUINO) || defined(__SAMD51__)
 #       if defined(ntohs)
 #       define _msgpack_be16(x) ntohs(x)
 #        elif defined(_byteswap_ushort) || (defined(_MSC_VER) && _MSC_VER >= 1400)
@@ -102,7 +102,7 @@
 #        define _msgpack_be16(x) ntohs(x)
 #   endif
 
-#if defined(_WIN32) || defined(__MBED__) || defined(__AVR__) || defined(TEENSYDUINO)
+#if defined(_WIN32) || defined(__MBED__) || defined(__AVR__) || defined(TEENSYDUINO) || defined(__SAMD51__)
 #        if defined(ntohl)
 #            define _msgpack_be32(x) ntohl(x)
 #        elif defined(_byteswap_ulong) || (defined(_MSC_VER) && _MSC_VER >= 1400)
